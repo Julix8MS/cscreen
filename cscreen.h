@@ -31,7 +31,7 @@
 #define WHITE 15
 #define CPI 3.14159269
 #ifdef _WIN32
-#warning Al usarlo con windows se sustituira la libreria unistd.h con conio.h, windows.h, io.h y dos.h
+#warning When using in Windows the library unistd.h will be replaced with conio.h, windows.h, dos.h and io.h
 #include <windows.h>
 #include <dos.h>
 #include <io.h>
@@ -356,13 +356,13 @@ double maxVal(double a, double b) {
 
 void ellipse(int x, int y, int RX, int RY, int val) {
 	double i, inc;
-	inc = CPI / maxVal(RX,RY) / 2;
+	inc = (CPI+0.1) / maxVal(RX,RY) / 4;
 	i=0;
   int nx = (int)((RX*cos(i)+y)+.5);
   int ny = (int)((RY*sin(i)+x)+.5);
   int px = 0;
   int py = 0;
-	while(i <= CPI*2) {
+	while(i <= (CPI+0.1)*2) {
     px = nx;
     py = ny;
     nx = (int)((RX*cos(i)+y)+.5);
