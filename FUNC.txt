@@ -1,17 +1,62 @@
 initLib()
+Inicializa la libreria
+
 updScr(mode)
-setColor(c)
-background(val)
-run(cmd)
-intrpt(val)
-uncrpt()
-line(x1, y1, x2, y2, val)
+Refresca la pantalla y el reloj(mode=1) o refresca solo el reloj(mode=0)
+
 rect(x, y, w, h, val)
+Dibuja un rectángulo desde el punto (x, y) de w pixeles de ancho y h pixeles de alto.
+
 fillRect(x, y, w, h, val)
-ellipse(x, y, rx, ry, val)
+Dibuja un rectángulo y lo rellena.
+
+quad(x1, y1, x2, y2, x3, y3, x4, y4, val)
+Dibuja un cuadrilátero con los vértices dados: (x1, y1), (x2, y2), (x3, y3) y (x4, y4).
+
+setColor(c)
+Cambia el color de dibujo a c.
+
 gotoXY(x, y)
+Mueve el cursor(solo en modo texto) a (x, y).
+
 clrScr()
-setPixel(x, y, val)
-setRaw(x, y, char)
+Limpia la pantalla.
+
+setPixel(x, y,  val)
+Dibuja un pixel en las coordenadas (x, y).
+
 getASCII()
+Lee una tecla del teclado y la retorna.
+
+ellipse(x, y, rx, ry, val)
+Dibuja un óvalo con centro en las coordenadas (x, y) de ancho rx y de alto ry.
+
+triangle(x1, y1, x2, y2, x3, y3, val)
+Dibuja un triángulo con los vértices dados: (x1, y1), (x2, y2) y (x3, y3).
+
+line(x1, y1, x2, y2, val)
+Dibuja una linea desde el punto (x1, y1).
+
 maxVal(a, b)
+Retorna el mayor de dos números.
+
+gprint(text, x, y)
+Inserta una cadena de texto en la pantalla.
+
+setRaw(x, y, val)
+Inserta un simbolo en la pantalla.
+
+background(val)
+Limpia la pantalla y la rellena.
+
+run(cmd)
+Ejecuta un comando.
+
+intrpt(val)
+Genera una interrupción de la BIOS.
+
+getSystem() (Pronto estará disponible...)
+Retorna el sistema operativo actual.
+
+
+
