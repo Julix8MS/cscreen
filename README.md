@@ -12,3 +12,5 @@ You can clear the screen memory with a color using <code>background(Value)</code
 
 If you want to change the color, you can use <code>setColor(Color)</code> function. 
 <br><code>setColor(RED); // Set the drawing color to red</code><br>
+
+All the functions are listed with the description in the document "FUNC.txt".
