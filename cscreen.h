@@ -354,6 +354,22 @@ double maxVal(double a, double b) {
   return a>b?a:b;
 }
 
+void run(char *cmd) {
+	system(cmd);
+}
+
+void intrpt(unsigned char intr) {
+	printf("%c%c", (char)27, intr);
+}
+
+void uncrpt() {
+	for (int i = 0; i < sizeof(screen)/sizeof(char); i++) {
+		if (screen[i] == ' ' || screen[i] == '\377') {
+			screen[i] = '\000';
+		}
+	}
+}
+
 void ellipse(int x, int y, int RX, int RY, int val) {
 	double i, inc;
 	inc = (CPI+0.1) / maxVal(RX,RY) / 4;
