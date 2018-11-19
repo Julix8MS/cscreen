@@ -298,13 +298,13 @@ void rawLine(int x0, int y0, int x1, int y1, int val) {
   while(x < x1) {
     if (d <= 0) {
 	    d += incrE;
-	    x++;
+	    x += 0.1;
 	  } else {
       d += incrNE;
-      x++;
-      y++;
+      x += 0.1;
+      y += 0.1;
 	  }
-    setPixel(x, y, val);
+    setPixel(round(x), round(y), val);
   } 
 }
 
