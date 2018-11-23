@@ -181,7 +181,7 @@ float randomFloat(int min, int max) {
   return ((max-min)*((double)rand()/(double)RAND_MAX))+min;
 }
 
-char screen[SCREEN_WIDTH*SCREEN_HEIGHT];
+char screen[SCREEN_WIDTH*SCREEN_HEIGHT+1]; // Update for screen char buffer
 const double DEG2RAD = CPI/180.0;
 
 void initLib() {
@@ -297,13 +297,13 @@ void rawLine(int x0, int y0, int x1, int y1, int val) {
   setPixel(x, y, val);
   while(x < x1) {
     if (d <= 0) {
-	    d += incrE;
-	    x += 0.1;
-	  } else {
+      d += incrE;
+      x += 0.1;
+    } else {
       d += incrNE;
       x += 0.1;
       y += 0.1;
-	  }
+    }
     setPixel(round(x), round(y), val);
   } 
 }
